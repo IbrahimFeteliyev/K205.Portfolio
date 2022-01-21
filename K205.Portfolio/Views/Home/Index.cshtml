@@ -1,0 +1,71 @@
+﻿@using K205.Portfolio.Models
+
+@foreach (var item in ViewData["products"] as List<Product>)
+{
+    
+    
+
+    <body>
+        
+        <div class= "products">
+            <div class= "box-left">
+                <img  src="@item.PhotoURL" />
+            </div>
+            <div class= "box-right">
+                <h2>Qiymət: @item.Price Manat</h2>
+                <h3>@item.Name</h3>
+                <h3>Buraxılış ili: @item.Year Il</h3>
+                <h3>Haqqında: @item.Description</h3>
+
+             </div>
+        </div>
+        <a>MAŞINI AL</a>
+
+    </body>
+
+    <style>
+    body{
+        margin: 20px 50px;
+        background-color: #001f3f;
+
+    }   
+    a{
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 25px;
+        margin: 10px 0;
+        color:#001f3f;
+        background-color:#0074D9;
+        display: inline-block;
+        cursor: pointer;
+       
+    }
+    h2,h3{
+        color: white;
+        font-family: sans-serif;
+    }
+    .products{
+        display: flex;
+         align-items: center;
+         margin-bottom: 50px;
+         margin: 30px;
+         background-color: #0074D9;
+         
+    }
+
+    .box-left{
+        width: 50%;
+       
+    }
+    img{
+        width: 100%;
+   
+    }
+    .box-right{
+        padding: 0 60px;
+    }
+
+
+    </style>
+
+}
